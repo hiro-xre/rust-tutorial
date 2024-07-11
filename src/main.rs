@@ -1,14 +1,14 @@
-fn first_word(s: &String) -> usize {
-    let bytes = "s";
-    let bytes = s.as_bytes();
+fn main() {
+    let width1 = 30;
+    let height1 = 50;
 
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return i;
-        }
-    }
-
-    s.len()
+    println!(
+        // 長方形の面積は、{}平方ピクセルです
+        "The area of the rectangle is {} square pixels.",
+        area(width1, height1)
+    );
 }
 
-fn main() {}
+fn area(width: u32, height: u32) -> u32 {
+    width * height
+}
